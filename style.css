@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: radial-gradient(circle at center, rgb(255, 255, 255));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.moon {
+    position: relative;
+    border-radius: 50%;
+    width: 100vw;
+    height: 100vw;
+    max-width: 800px;
+    max-height: 800px;
+    background: url('full-moon-surreal-3840x2160-12417.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    animation: moon-rotation 30s linear infinite;
+    box-shadow: inset 60px 0 40px black,
+                inset 160px 0 60px rgba(0, 0, 0, 0.9),
+                inset -160px 0 60px rgba(248, 248, 213, 0.2);
+}
+
+@keyframes moon-rotation {
+    from {
+        background-position: -500px center;
+    }
+    to {
+        background-position: 500px center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .moon {
+        width: 100vw;
+        height: 100vw;
+        max-width: 300px;
+        max-height: 300px;
+    }
+}
